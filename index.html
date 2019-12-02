@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>IchigoJam PCG Pattern Editor</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <h1>IchigoJam PCG Pattern Editor</h1>
+    <div id="config">
+      <table>
+        <tbody>
+          <tr>
+            <th>編集サイズ:</th>
+            <td>
+              <span>横</span>
+              <input type="number" id="canvas-width" name="canvas-width" value="1" min="1" max="32">
+              <span>× 縦</span>
+              <input type="number" id="canvas-height" name="canvas-height" value="1" min="1" max="24">
+              <span>文字</span>
+              <button id="change-canvas-size">変更</button>
+            </td>
+          </tr>
+          <tr>
+            <th>ピクセルサイズ:</th>
+            <td>
+              <input type="number" id="pixel-size" name="pixel-size" value="50" min="5" max="95" step="5">
+              <span>pixel</span>
+            </td>
+          </tr>
+            <th>ビットマップ操作:</th>
+            <td>
+              <button id="bitmap-shift-up">↑</button>
+              <button id="bitmap-shift-down">↓</button>
+              <button id="bitmap-shift-left">←</button>
+              <button id="bitmap-shift-right">→</button>
+              <label>サイクリック<input type="checkbox" id="bitmap-shift-cyclic" name="bitmap-shift-cyclic" checked></label>
+            </td>
+          </tr>
+          <tr>
+            <th></th>
+            <td>
+              <button id="bitmap-revert">反転</button>
+              <button id="bitmap-clear">クリア</button>
+            </td>
+          <tr>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div id="canvas"></div>
+    <div id="results"><h2>PCG パターン定義</h2></div>
+    <div id="port">
+      <div>
+        <button id="export">エクスポート</button>
+        <button id="import">インポート</button>
+      </div>
+      <textarea id="port-textarea"></textarea>
+    </div>
+  </main>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="jquery-3.4.1.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
+
